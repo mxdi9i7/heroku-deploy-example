@@ -34,7 +34,6 @@ app.use(_express.default.urlencoded({
   extended: false
 }));
 app.use((0, _cookieParser.default)());
-app.use(_express.default.static(_path.default.join(__dirname, '../public')));
 app.use('/', _index.default);
 app.use('/users', _users.default);
 app.use('/posts', _posts.default);
