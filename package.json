@@ -7,8 +7,9 @@
 	},
 	"private": true,
 	"scripts": {
-		"build": "npm-run-all clean transpile",
+		"build": "npm-run-all clean-install clean transpile",
 		"start": "node ./dist-server/bin/www",
+		"clean-install": "npm run clean-install",
 		"dev": "NODE_ENV=development npm-run-all build start",
 		"transpile": "babel ./server --out-dir dist-server",
 		"clean": "rimraf dist-server",
